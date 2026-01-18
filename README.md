@@ -110,7 +110,7 @@ Asks user confirmation before exiting the app.
 ## 🚀 How to Run the Project
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/rooparam01/Task-Management-App.git
 cd taskmanager
 flutter pub get
 flutter run
