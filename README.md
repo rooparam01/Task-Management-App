@@ -111,6 +111,6 @@ Asks user confirmation before exiting the app.
 
 ```bash
 git clone https://github.com/rooparam01/Task-Management-App.git
-cd taskmanager
+cd Task-Management-App
 flutter pub get
 flutter run
