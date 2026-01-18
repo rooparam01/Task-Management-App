@@ -1,42 +1,99 @@
-# 📋 Task Management App
+# 📋 Task Management App (Flutter)
 
-A simple and efficient **Task Management Application** built using **Flutter**.  
-The app allows users to create, edit, delete, and filter tasks with persistent local storage.
-
----
-
-## 🚀 Features
-
-- ➕ Create new tasks
-- ✏️ Edit existing tasks
-- 🗑️ Delete tasks
-- 📅 Set due date for tasks
-- ✅ Mark tasks as **Completed** or **Pending**
-- 🔍 Filter tasks:
-    - All Tasks
-    - Completed Tasks
-    - Pending Tasks
-- 💾 Offline data persistence using **Hive**
-- 🎨 Clean and responsive **Material UI**
-- ⚡ Smooth UI interactions
+A simple and clean **Task Management App** built using **Flutter**.  
+The app allows users to **create, edit, delete, complete, and filter tasks**, with **local data persistence** and smooth UI interactions.
 
 ---
 
-## 🧠 Architecture & State Management
+## ✨ Features
 
-- **State Management:** Provider
-- **Architecture Pattern:** MVVM (Model–View–ViewModel)
-- **Local Storage:** Hive (NoSQL database)
+### ✅ Task Management
+- Create new tasks with:
+  - Title
+  - Description
+  - Due Date
+  - Status (Pending / Completed)
+- Edit existing tasks
+- Delete tasks with confirmation dialog
+- Mark tasks as completed
+
+### 🔍 Task Filtering
+- View **All Tasks**
+- View **Completed Tasks**
+- View **Pending Tasks**
+
+### 💾 Data Persistence
+- Uses **Hive (local database)** to store tasks
+- Data remains intact even after app restart
+
+### 🎨 UI & UX
+- Clean and modern UI
+- Material Design principles
+- Smooth animations
+- Confirmation dialogs for critical actions
+- Exit confirmation on back press
 
 ---
 
-## 📱 Screens
+## 📱 Screenshots
 
-- Splash Screen
-- Task List Screen
-- Add Task Screen
-- Edit Task Screen
-- Delete Confirmation Dialog
+### 🏠 Task List Screen
+Displays all tasks with status, due date, and filters.
+
+![Task List](assets/screenshots/task_list.jpeg)
+
+---
+
+### ➕ Add Task Screen
+Create a new task with all required details.
+
+![Add Task](assets/screenshots/add_task.jpeg)
+
+---
+
+### ✏️ Edit Task Screen
+Edit task title, description, due date, and status.
+
+![Edit Task](assets/screenshots/edit_task.jpeg)
+
+---
+
+### 🎉 Mark Task as Completed
+Shows animation when task is marked completed.
+
+![Completed Task](assets/screenshots/on_completed.jpeg)
+
+---
+
+### 🗑️ Delete Task Confirmation
+Confirmation popup before deleting a task.
+
+![Delete Confirmation](assets/screenshots/delete_confirmation.jpeg)
+
+---
+
+### 🚪 Exit App Confirmation
+Asks user confirmation before exiting the app.
+
+![Exit App](assets/screenshots/close_warning.jpeg)
+
+---
+
+## 🧠 State Management
+
+- **Provider** is used for state management
+- Centralized `TaskProvider` handles:
+  - Task list
+  - Filtering
+  - CRUD operations
+  - UI updates
+
+---
+
+## 🗄️ Local Storage
+
+- **Hive** is used as a lightweight local database
+- Tasks are stored locally and loaded on app startup
 
 ---
 
@@ -44,18 +101,16 @@ The app allows users to create, edit, delete, and filter tasks with persistent l
 
 - **Flutter**
 - **Dart**
-- **Provider** – State management
-- **Hive & Hive Flutter** – Local database
-- **UUID** – Unique task IDs
-- **Intl** – Date formatting
+- **Provider**
+- **Hive**
+- **Material UI**
 
 ---
 
-## 📦 Dependencies
+## 🚀 How to Run the Project
 
-```yaml
-provider: ^6.1.5+1
-hive: ^2.2.3
-hive_flutter: ^1.1.0
-uuid: ^4.5.2
-intl: ^0.20.2
+```bash
+git clone <repository-url>
+cd taskmanager
+flutter pub get
+flutter run
